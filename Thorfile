@@ -20,6 +20,7 @@ module Middleman
       run 'mv source/rails-stylesheets-master source/stylesheets'
       run 'mv source/stylesheets/application.scss source/stylesheets/application.css.scss'
       run 'rm source/stylesheets/README.md'
+      run "sed -i '' '/font-awesome-sprockets/d' ./source/stylesheets/application.css.scss"
     end
 
     def generate_binstub
