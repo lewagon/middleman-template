@@ -22,6 +22,8 @@ module Middleman
       run 'rm source/stylesheets/README.md'
       run "sed -i '' '/font-awesome-sprockets/d' ./source/stylesheets/application.css.scss"
       run 'rm source/stylesheets/pages/_home.scss && mv source/home.scss source/stylesheets/pages/_home.scss'
+      run 'mv source/about.scss source/stylesheets/pages/_about.scss'
+      echo 'echo "@import \"about\";" >> source/stylesheets/pages/_index.scss'
     end
 
     def generate_binstub
