@@ -1,0 +1,22 @@
+---
+title: Le Wagon - Middleman - About
+---
+
+<div id="about">
+  <div class="about-content">
+    <h1>This template is built with <i class="fa fa-heart"></i> by</h1>
+    <ul class="list-inline">
+      <% data.users.each do |user| %>
+        <li>
+          <%= image_tag user.picture_url, class: "img-circle" %>
+          <h2><%= user.name %></h2>
+          <p>
+            <% link_to "http://github.com/#{user.github}" do %>
+              <i class="fa fa-github"></i> <%= user.github %>
+            <% end %>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
