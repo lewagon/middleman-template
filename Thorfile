@@ -20,11 +20,6 @@ module Middleman
       run 'mv source/rails-stylesheets-master source/stylesheets'
       run 'mv source/stylesheets/application.scss source/stylesheets/application.css.scss'
       run 'rm source/stylesheets/README.md'
-      if RUBY_PLATFORM =~ /darwin/ # OSX
-        run "sed -i '' '/font-awesome-sprockets/d' ./source/stylesheets/application.css.scss"
-      else
-        run "sed -i '/font-awesome-sprockets/d' ./source/stylesheets/application.css.scss"
-      end
       run 'rm source/stylesheets/pages/_home.scss && mv source/home.scss source/stylesheets/pages/_home.scss'
       run 'mv source/about.scss source/stylesheets/pages/_about.scss'
       run 'echo "@import \"about\";" >> source/stylesheets/pages/_index.scss'
