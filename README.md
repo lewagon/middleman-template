@@ -35,7 +35,7 @@ middleman server
 
 And go to [localhost:4567](http://localhost:4567)
 
-## If the GitHub pages is not for an user but for an organization
+## If the GitHub pages is not for a user but for an organization
 You need to change the default branch to deploy 'gh-pages' -> 'master'
 ```bash
 activate :deploy do |deploy|
